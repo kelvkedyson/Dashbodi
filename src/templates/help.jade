@@ -1,0 +1,19 @@
+extends ./layout.jade
+
+block content
+		.container
+			p.alert.alert-secondary Kwa dukuduku, gumzo au umbea wowote, wasiliana na yeyote kutoka katika timu zetu
+			h1 Our Team
+			.row
+				each member in members
+					.col-sm-6.col-md-4.col-lg-12
+						legend #{member.group} 
+							span.badge.badge-info #{member.members.length}
+						.card
+							img(src="..." class="card-img-top" alt="...")
+							.card-body
+								h5.card-title Member name
+								p.card-text.text-muted Nickname:
+							.card-footer
+								a(href='/help/member') View
+						hr
